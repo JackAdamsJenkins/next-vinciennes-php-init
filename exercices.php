@@ -35,6 +35,26 @@ if($note >= 12){
 
 
 /*
-    Créer un programme qui demande une valeur entière (simulée) et qui affiche son double si cette donnée est inférieure à un seuil donné.
+    Créer un programme qui demande une valeur entière (simulée) et qui 
+    affiche son double 
+        si cette donnée est inférieure à un seuil donné.
 */
+$valeur = 25;
+$seuil = 15;
+
+if($valeur < $seuil){
+    $valeur = $valeur * 2;
+}
+
+echo "<br/>La valeur : $valeur";
+
+/*
+    Créer un programme qui demande d’entrer une valeur (simulée) et qui affiche :
+        - Petit joueur, si la valeur est inférieure à 15
+        - Très bon choix !, si la valeur est supérieure à 15 et inférieure à 50
+        - Vers l’infini et au-delà, si la valeur est supérieure ou égale à 50
+*/
+
+
+
 ?>
