@@ -9,15 +9,32 @@
         - Si le prix HT est de 100€
         - Le prix TTC sera 120€
 */
-$prixHT = 200;
+$prixHT = 515;
+$tva = 1.2;
 
+$prixTTC = $prixHT * $tva;
 
+echo "<br/>Le prix HT est $prixHT €, le prix TTC est $prixTTC €";
+
+echo "<br/><br/>";
 /*
-    EX 01 :
+    EX 02 :
     Créer un programme qui demande d’entrer une note (simulée) et qui affiche :
         - Reçu avec mention assez bien, si la note est supérieure ou égale à 12
         - Reçu avec mention passable, si la note est supérieure à 10 et inférieure à 12
         - Insuffisant, dans tous les autres cas
 */
-$note = 8;
+$note = 16;
+if($note >= 12){
+    echo "Reçu avec mention assez bien";
+} elseif($note > 10 && $note < 12){
+    echo "Reçu avec mention passable";
+} else {
+    echo "Insuffisant";
+}
+
+
+/*
+    Créer un programme qui demande une valeur entière (simulée) et qui affiche son double si cette donnée est inférieure à un seuil donné.
+*/
 ?>
