@@ -47,18 +47,28 @@ if($valeur < $seuil){
 }
 
 echo "<br/>La valeur : $valeur";
-
+echo "<br/>";
 /*
     Créer un programme qui demande d’entrer une valeur (simulée) et qui affiche :
         - Petit joueur, si la valeur est inférieure à 15
         - Très bon choix !, si la valeur est supérieure à 15 et inférieure à 50
         - Vers l’infini et au-delà, si la valeur est supérieure ou égale à 50
 */
+$joueur = 15;
+
+if($joueur < 15){
+    echo "Petit joueur";
+} elseif($joueur > 15 AND $joueur < 50){
+    echo "Très bon choix !";
+} elseif($joueur >= 50){
+    echo "Vers l'infini et au-delà";
+}
 
 
 
 /*
-    Créer un programme qui prend un argument de type integer (donnée utilisateur) et qui retourne un booléen. Ce programme testera si :
+    Créer un programme qui prend un argument de type integer (donnée utilisateur) et qui retourne un booléen. 
+    Ce programme testera si :
         - L’utilisateur à plus de 18 ans : Affiche : Vous avez plus de 18 ans
         - L’utilisateur à moins de 18 ans : Affiche : Vous êtes encore mineur 
 */
