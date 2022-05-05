@@ -57,4 +57,11 @@ echo "<br/>La valeur : $valeur";
 
 
 
+/*
+    Créer un programme qui prend un argument de type integer (donnée utilisateur) et qui retourne un booléen. Ce programme testera si :
+        - L’utilisateur à plus de 18 ans : Affiche : Vous avez plus de 18 ans
+        - L’utilisateur à moins de 18 ans : Affiche : Vous êtes encore mineur 
+*/
+
+
 ?>
