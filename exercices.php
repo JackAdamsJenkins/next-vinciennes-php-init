@@ -69,9 +69,41 @@ if($joueur < 15){
 /*
     Créer un programme qui prend un argument de type integer (donnée utilisateur) et qui retourne un booléen. 
     Ce programme testera si :
-        - L’utilisateur à plus de 18 ans : Affiche : Vous avez plus de 18 ans
+        - L’utilisateur à au moins 18 ans : Affiche : Vous êtes majeur
         - L’utilisateur à moins de 18 ans : Affiche : Vous êtes encore mineur 
 */
+$age = 19;
 
+// Première solution
+
+$isMajor = "";
+
+if($age >= 18){
+    $isMajor = true; // booléen
+} else {
+    $isMajor = false;
+}
+
+if($isMajor == true){
+    echo "Vous êtes majeur";
+} else {
+    echo "Vous êtes mineur";
+}
+// Fin de première solution
+
+// Autre solution, avec les ternaires :
+$isMajor = ($age >= 18) ? true : false;
+
+if($isMajor){
+    echo "Vous êtes majeur";
+} else {
+    echo "Vous êtes mineur";
+}
+
+// if($isMajor == true)
+// if($isMajor) // même chose que pour la ligne plus haute
+
+// if($isMajor == false)
+// if(!$isMajor) // même chose que pour la ligne plus haute
 
 ?>
