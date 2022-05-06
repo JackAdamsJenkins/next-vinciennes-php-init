@@ -373,6 +373,27 @@
 
     echo "<br/> $bonjour";
 
+    /*
+       Nous avons vu :
+            - Les boucles
+            - Les inclusions de fichier
+            - Les fonctions
+            - La manipulation de formulaires
+            - L'upload de fichier
+            
+        Il reste à voir :
+
+        La manipulation de formulaires : 
+            - Récupérer les données envoyées par un formulaire HTML
+        
+        Il existe deux méthodes d'envoie de données par un formulaire HTML : 
+            - GET : Transmet les données par l'url (par l'adresse de la page)
+            - POST : Transmet les données directement au serveur en passant par une requête post (invisible pour l'utilisateur)
+
+            - GET : a utiliser lorsque vous transmettez des données NON SENSIBLES
+            - POST : Si vous avez des données qui ne doivent pas être affichées en clair, choisissez cette méthode
+    */
+
     echo "<br/>";
     echo "<br/>";
     echo "<br/>";
