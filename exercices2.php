@@ -21,11 +21,24 @@
     /*
         Avec la boucle while, afficher tous les nombres pairs de 0 à 50 (inclu)
     */
+    $i = 0;
+
+    while($i <= 50){
+        echo "<br/> Nombre pair : $i";
+
+        $i += 2;
+    }
 
 
     /*
-        Avec la boucle while, afficher tous les nombres impairs de 0 à 88 
+        Avec la boucle while, afficher tous les nombres impairs de 1 à 88 
     */
+    $i = 1;
+    while($i <= 88){
+        echo "<br/>Nombre impair : $i";
+
+        $i += 2;
+    }
 
 
 ?>
