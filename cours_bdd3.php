@@ -41,6 +41,16 @@ $req = mysqli_query($bdd, $sql);
             // $data[1] : la donnée du DEUXIEME champ dans la base de données (prenom_user)
             echo "<p>Votre id est ".$data[0].", votre prénom est ".$data[1]."</p>";
         }
+
+        // while($data = mysqli_fetch_assoc($req)){
+        //     // On obtient un tableau
+        //     // Afficher à l'écran le contenu d'une variable/tableau
+        //     // var_dump($data);
+        //     // On récupère 4 données par lignes
+        //     // $data[0] : la donnée du PREMIER champ dans la base de données (id_user)
+        //     // $data[1] : la donnée du DEUXIEME champ dans la base de données (prenom_user)
+        //     echo "<p>Votre id est ".$data["id_user"].", votre prénom est ".$data["prenom_user"]."</p>";
+        // }
     
     ?>
 </body>
