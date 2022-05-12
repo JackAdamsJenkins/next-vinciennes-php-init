@@ -23,8 +23,8 @@ if(!$bdd)
         - Supprimer des données
 
     Système CRUD
-        - Create
-        - Read
+        - Create (INSERT INTO)
+        - Read (SELECT)
         - Update
         - Delete
 */
@@ -56,6 +56,51 @@ if(isset($_POST['prenom'])){
     
     $message = "Utilisateur ajouté à la base de données";
 }
+
+// Afficher les données qui se trouvent dans la base de données
+// Sélectionne TOUTES(*) les données de ma table USER
+$sql = "SELECT * FROM user";
+// Sélectionne le prénom et le nom de TOUS les utilisateurs
+$sql = "SELECT prenom_user, nom_user FROM user";
+
+/*
+    Je suis un utilisateur
+    Je souhaite me connecter
+
+    Je dois rentrer mon nom et mon mot de passe
+    > Chercher dans la base de données l'utilisateur qui correspond avec mes informations
+
+    > Techniquement, le système doit me renvoyer UN SEUL résultat au maximum
+*/
+$sql = "SELECT prenom_user, nom_user FROM user WHERE mail_user ='info@errantecreation.com'";
+
+// Je souhaite afficher toutes les personnes qui s'appellent "Marianne" et qui sont inscrites sur mon site
+$sql = "SELECT nom_user FROM user WHERE prenom_user='Marianne' AND date_naissance > '10/01/1990'";
+// Si j'ai 6 utilisateurs avec le prénom Marianne, le système m'envoie les 6 résultats
+
+// Lorsqu'on ajoute une donnée à la base de données > Le système renvoi automatiquement un ID
+$sql = "SELECT * FROM user WHERE id=1";
+
+/*  
+    Je possède un blog, qui contient un certain nombre d'articles
+    Sur ma page d'accueil, je veux afficher les 6 derniers articles(descendant) dans la catégorie "tutos"
+
+    TABLE : article
+    Champs : 
+        - id_article
+        - titre_article
+        - contenu_article
+        - extrait_article
+        - date_article
+        - categorie_article
+
+    Pour organiser par ordre : ORDER BY <champ> DESC|ASC
+*/
+$sql = "SELECT titre_article, extrait_article, date_article FROM article WHERE categorie_article='tutos' LIMIT 6";
+
+$sql = "SELECT titre_article, extrait_article, date_article FROM article WHERE categorie_article='tutos' ORDER BY id DESC LIMIT 6";
+
+
 
 ?>
 <!DOCTYPE html>
