@@ -14,6 +14,20 @@ if(!$bdd)
     die("Vous n'êtes pas connecté");
 
 $message = null;
+// Tester SI la variable GET delete existe et est à 1
+if(isset($_GET['id']) && isset($_GET['delete']) && $_GET['delete'] == 1){
+    // Lancer la suppression
+    $id = $_GET['id'];
+    $sql = "DELETE FROM user WHERE id_user=?";
+    $prepare = mysqli_prepare($bdd, $sql);
+    mysqli_stmt_bind_param($prepare, "i", $id);
+
+    if(!mysqli_stmt_execute($prepare))
+        die("Un problème est survenu lors de la suppression");
+
+    $message = "L'utilisateur a été supprimé";
+}
+
 // On traite la modification (update) de données lors de l'envoi du formulaire POST
 if(isset($_POST['prenom']) && isset($_GET['id'])){
     // Récupérer les informations du formulaire et de l'id
@@ -54,7 +68,7 @@ $req = mysqli_query($bdd, $sql);
     <h1>Lecture de données</h1>
     <?php 
         while($data = mysqli_fetch_row($req)){
-            echo '<p>Votre id est '.$data[0].', votre prénom est '.$data[1].' <a href="?id='.$data[0].'">Modifier</a></p>';
+            echo '<p>Votre id est '.$data[0].', votre prénom est '.$data[1].' <a href="?id='.$data[0].'">Modifier</a> <a href="?id='.$data[0].'&delete=1">Supprimer</a></p>';
         }
     ?>
     

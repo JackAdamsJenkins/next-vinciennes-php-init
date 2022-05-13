@@ -1,0 +1,34 @@
+table.GeneratedTable {
+  width: 100%;
+  background-color: #ffffff;
+  border-collapse: collapse;
+  border-width: 2px;
+  border-color: #3dd11f;
+  border-style: solid;
+  color: #000000;
+}
+
+table.GeneratedTable td, table.GeneratedTable th {
+  border-width: 2px;
+  border-color: #3dd11f;
+  border-style: solid;
+  padding: 3px;
+}
+
+table.GeneratedTable thead {
+  background-color: #60e94e;
+}
+td {
+    text-align: center;
+}
+a {
+  text-decoration: none;
+  color: #388f2c;
+}
+a:hover {
+  text-decoration: underline;
+  color: #54cd44;
+}
+h2 {
+  color:rgb(170, 0, 0);
+}
