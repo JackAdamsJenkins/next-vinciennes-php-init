@@ -28,14 +28,5 @@ while($data = mysqli_fetch_assoc($getResult)){
     echo "<p>Votre prénom est ".$data["prenom_user"].", votre nom est ".$data["nom_user"]."</p>";
 }
 
-// Récupérer UN seul résultat
-mysqli_stmt_fetch($userStatement);
- 
-echo "id: ".$id;
-echo "<br>";
-echo "First name: ".$first_name;
-echo "<br>";
-echo "Last name: ".$last_name;
-echo "<br>";
 
 ?>
